@@ -1,0 +1,58 @@
+:root {
+    --background: #FCF8F5;
+    --black: #0E0E0E;
+    --accent: #F39DB1;
+    --fancy-font: ;
+    --sans-font: ;
+}
+
+/* USE FALLBACK FONT!!!! https://stackoverflow.com/questions/53846582/can-i-use-css-variables-in-a-font-list-and-have-it-work-in-legacy-browsers */
+
+* {
+    box-sizing: border-box;
+    font-family: Corbel, Helvetica, sans-serif;
+    /* font-family: The Seasons, Helvetica, serif; */
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+}
+
+body {
+    background-color: var(--background);
+}
+
+header {
+    position: fixed;
+}
+
+li {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    color: var(--black);
+}
+
+nav a:hover {
+    color: var(--accent);
+    transition: 0.5s;
+}
+
+#logoImg {
+    color: var(--black);
+    width: 4em;
+    height: auto;
+}
+
+#logoImg:hover {
+    color: var(--accent);
+    /* content: url(./assets/logo_pink.png); */
+    /* background-image: url(./assets/logo_pink.png); */
+    transition: 0.75s;
+}

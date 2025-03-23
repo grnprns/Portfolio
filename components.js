@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <script type="module" src="/components.js"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <noscript>
-        <header>Please activate JavaScript for this website to work properly ♥</header>
-    </noscript>
-    <!-- Left in for testing html changes in header -->
-    <!-- <header>
+const header = ` <header>
         <nav>
             <ul>
                 <li>
@@ -31,19 +15,24 @@
                 <li><a href="../legal_notice.html">Legal Notice</a></li>
             </ul>
         </nav>
-    </header> -->
+    </header>
+    `
 
-    <site-header></site-header>
+const footer = `<footer>© Stefanie Müller</footer>`
 
-    <h1>Stefanie Müller</h1>
-    <h2>UI/UX Designer</h2>
-    <h3>About Me</h3>
-    <h3>Software Skills</h3>
-    <h3>Programming Skills</h3>
-    <h3>Linguistic Skills</h3>
-    <h3>Contact Me</h3>
+class SiteHeader extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = header;
+    }
+}
 
-    <site-footer></site-footer>
-</body>
+class SiteFooter extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = footer;
+    }
+}
 
-</html>
+customElements.define("site-header", SiteHeader);
+customElements.define("site-footer", SiteFooter);
