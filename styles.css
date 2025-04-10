@@ -55,8 +55,12 @@ li {
 }
 
 nav {
-    border-bottom: 0.1em solid var(--accent);
+    /* border-bottom: 0.1em solid var(--accent); */
     font-size: 0.1rem;
+}
+
+nav ul {
+    border-bottom: 0.1em solid var(--accent);
 }
 
 nav li {
@@ -90,4 +94,8 @@ nav a:hover {
     /* content: url(./assets/logo_pink.png); */
     /* background-image: url(./assets/logo_pink.png); */
     transition: 0.75s;
+}
+
+.placeholder {
+    border: 2px solid red;
 }
