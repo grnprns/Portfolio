@@ -18,8 +18,6 @@ const header = ` <header>
     </header>
     `
 
-const footer = `<footer>© Stefanie Müller</footer>`
-
 class SiteHeader extends HTMLElement {
     constructor() {
         super();
@@ -27,12 +25,5 @@ class SiteHeader extends HTMLElement {
     }
 }
 
-class SiteFooter extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = footer;
-    }
-}
 
 customElements.define("site-header", SiteHeader);
-customElements.define("site-footer", SiteFooter);

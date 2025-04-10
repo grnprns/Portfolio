@@ -1,4 +1,20 @@
 {
     "about_me": "As a designer focusing on UX, I help you guide your customers through your digital products, thus increasing satisfaction and conversion rates. I am pursuing a B.Sc. in UX design while working as a UX designer for my hometown, creating online forms people want to actually fill in while supporting other departments in processing citizen requests. Another degree in linguistics and foreign languages helps me communicate effectively in both the office and in my designs. In my free time, I love going on walks, honing my artistic skills in my sketchbook or teasing my brain with variant sudoku.",
-    "email": "stefanie@laura-mueller.de"
+    "email": "stefanie@laura-mueller.de",
+    "learnMore": "Learn more about the project here.",
+    "projectsApp": "Supporting people with dementia: Providing relief in care homes.",
+    "projectsScreen": "UI design for printer screens: Redesign of cluttered, confusing UI.",
+    "projectsIcon": "Icon designs for sustainability app: Design for two different user groups.",
+    "appDesign": [
+        {
+            "subtitle": "Icon designs for sustainability app: Design for two different user groups.",
+            "research": "Our goal with this collaborative project was to support people with dementia and their family, friends and caregivers. Of course, we first had to do some research on the illness and the biggest challenges that come with it. We looked for information online in forums and different foundations. The Alzheimer Gesellschaft Ingolstadt helped us find people to interview about the illness. We also talked to a family member who takes care of her mother. Our interviewees asked us not to take pictures or publish any personal information.",
+            "concept": "We came up with different concepts, but ultimately decided on a concept that would help modern care homes provide care for their residents and relief for their caregivers. Our app will work on big touchscreen TVs in common areas of care facilities and will offer single and multiplayer games. It can be used standing up or sitting down and will have some exergaming elements.",
+            "personas": "Our personas reflect the aforementioned target groups: residents of care homes and their caregivers. Creating these personas helped us keep in mind their particular needs.",
+            "prototypes": "Our paper prototypes were made on a tablet, but we printed them out and had a chance to show them to our interview partners. They gave us feedback on the games and game play. For example, we realised that we didn’t need buttons for rotation as pieces can be rotated on the touchscreen using two hands. This also adds an aspect of exergaming because these small movements can also be helpful.",
+            "userJourney": "After the final interviews and usability tests, we finalised our user journeys in Miro. The example shows the user journey for Math Genius.",
+            "wireframes": "Our wireframes were based on our paper prototypes and the feedback we got. The wireframes were made in Figma and we ended up with 51 screens.",
+            "styleMoodboard": "Before starting on the design, we each made a moodboard to show each other what vibe we had in mind. After talking it through, we narrowed it down to one common moodboard. The style we decided on is light, colourful and warm through the use of natural texture (wood, fabric). To make it more haptic, we would incorporate skeumorphism into the buttons."
+        }
+    ]
 }
