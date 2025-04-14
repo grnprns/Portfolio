@@ -108,3 +108,80 @@ main a {
 .placeholder {
     border: 2px solid red;
 }
+
+
+/* Test for grid layout */
+/* Section styling */
+.brainstorming-section {
+    margin-top: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    /* Two equal-width columns */
+    grid-template-columns: repeat(4, 1fr);
+    /* Automatically adjust row height */
+    grid-auto-rows: auto;
+    /* Space between grid items */
+    gap: 1rem;
+}
+
+/* Styling for images */
+.grid-container img {
+    /* Make images responsive */
+    width: 100%;
+    /* Maintain aspect ratio */
+    height: auto;
+    /* Ensure images fit nicely */
+    object-fit: cover;
+    /* Optional: Add a border for better visuals */
+    border: 1px solid #ddd;
+    /* Optional: Rounded corners */
+    /* border-radius: 5px; */
+}
+
+
+.grid-container .wide-1 {
+    grid-column: span 1;
+}
+
+.grid-container .wide-2 {
+    grid-column: span 2;
+}
+
+.grid-container .wide-3 {
+    grid-column: span 3;
+}
+
+.grid-container .tall-1 {
+    grid-row: span 1;
+}
+
+.grid-container .tall-2 {
+    grid-row: span 2;
+}
+
+.grid-container .grid-end {
+    align-content: end;
+}
+
+
+.gap-between-sections {
+    border-bottom: 2rem solid var(--background);
+
+}
+
+/* Adjust layout for larger screens */
+@media (max-width: 768px) {
+    .grid-container {
+        display: block;
+    }
+
+    /* Add a border below the first image on smaller screens */
+    .border-bottom-md {
+        /* Adjust color and thickness as needed */
+        border-bottom: 1rem solid var(--background);
+    }
+}
