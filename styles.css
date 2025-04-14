@@ -61,6 +61,11 @@ nav {
 
 nav ul {
     border-bottom: 0.1em solid var(--accent);
+    padding: 0;
+}
+
+site-header.container {
+    padding: 0;
 }
 
 nav li {
@@ -80,6 +85,10 @@ nav a {
 nav a:hover {
     color: var(--accent);
     transition: 0.5s;
+}
+
+main a {
+    color: var(--black);
 }
 
 #logoImg {
