@@ -130,58 +130,53 @@ main a {
 
 /* Styling for images */
 .grid-container img {
-    /* Make images responsive */
     width: 100%;
-    /* Maintain aspect ratio */
     height: auto;
-    /* Ensure images fit nicely */
     object-fit: cover;
-    /* Optional: Add a border for better visuals */
     border: 1px solid #ddd;
     /* Optional: Rounded corners */
     /* border-radius: 5px; */
 }
 
 
-.grid-container .wide-1 {
-    grid-column: span 1;
-}
+.grid-container {
+    .wide-1 {
+        grid-column: span 1;
+    }
 
-.grid-container .wide-2 {
-    grid-column: span 2;
-}
+    .wide-2 {
+        grid-column: span 2;
+    }
 
-.grid-container .wide-3 {
-    grid-column: span 3;
-}
+    .wide-3 {
+        grid-column: span 3;
+    }
 
-.grid-container .tall-1 {
-    grid-row: span 1;
-}
+    .tall-1 {
+        grid-row: span 1;
+    }
 
-.grid-container .tall-2 {
-    grid-row: span 2;
-}
+    .tall-2 {
+        grid-row: span 2;
+    }
 
-.grid-container .grid-end {
-    align-content: end;
+    .grid-end {
+        align-content: end;
+    }
 }
-
 
 .gap-between-sections {
     border-bottom: 2rem solid var(--background);
-
 }
 
-/* Adjust layout for larger screens */
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
     .grid-container {
         display: block;
     }
 
-    /* Add a border below the first image on smaller screens */
+    /* Add a border below images on smaller screens */
     .border-bottom-md {
-        /* Adjust color and thickness as needed */
         border-bottom: 1rem solid var(--background);
     }
 }
