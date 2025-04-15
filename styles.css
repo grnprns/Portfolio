@@ -127,7 +127,7 @@ img {
     font-family: Arial, sans-serif;
 }
 
-.software-icons {
+.row-icons {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -393,6 +393,7 @@ img[alt="Houdini Icon"] {
     }
 
     .moodboard-grid .img-2 {
+        /* deleting grid-column breaks the following breakpoint for as of yet unknown reasons */
         grid-column: 3;
         visibility: hidden;
     }
