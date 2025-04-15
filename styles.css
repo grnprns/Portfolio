@@ -127,6 +127,17 @@ img {
     font-family: Arial, sans-serif;
 }
 
+.software-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+img[alt="Houdini Icon"] {
+    width: 5.375rem;
+    height: auto;
+}
+
 /* Grid containers */
 
 .grid-container {
