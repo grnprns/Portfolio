@@ -133,7 +133,7 @@ img {
     gap: 1.5rem;
 }
 
-img[alt="Houdini Icon"] {
+.row-icons img {
     width: 5.375rem;
     height: auto;
 }
