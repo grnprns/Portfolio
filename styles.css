@@ -1,9 +1,14 @@
+@font-face {
+    font-family: "The Seasons";
+    src: local("The Seasons"), local("TheSeasons-Regular");
+}
+
 :root {
     --background: #FCF8F5;
     --black: #0E0E0E;
     --accent: #F39DB1;
-    --fancy-font: ;
-    --sans-font: ;
+    --fancy-font: "The Seasons", serif;
+    --sans-font: Corbel, Quicksand, Helvetica, sans-serif;
     --grid-gap: 1rem;
 }
 
@@ -11,7 +16,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: Corbel, Helvetica, sans-serif;
+    font-family: var(--sans-font);
     /* font-family: The Seasons, Helvetica, serif; */
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
@@ -46,6 +51,32 @@ header {
 
 main {
     margin: .5em;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fancy-font);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h2+p {
+    font-size: 2rem;
+}
+
+.index h1 {
+    font-size: 4rem;
+}
+
+.index h2 {
+    font-size: 3rem;
 }
 
 footer {
@@ -191,7 +222,7 @@ img {
 }
 
 .gap-bottom {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .screen-moodboard {
@@ -311,6 +342,25 @@ img {
     align-self: end;
 }
 
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1920 / 1080;
+}
+
+.white-img {
+    border: 1px solid #D6D6D6;
+    border-radius: .1rem;
+    padding: 0;
+    /* Ensure no padding inside the image */
+    margin: 0;
+    /* Ensure no margin around the image */
+}
+
+.read-more a {
+    text-decoration: underline;
+}
 
 @media screen and (max-width: 1000px) {
     .moodboard-grid {
