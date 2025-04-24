@@ -7,7 +7,7 @@
     --background: #FCF8F5;
     --black: #0E0E0E;
     --accent: #F39DB1;
-    --fancy-font: "The Seasons", serif;
+    --fancy-font: the-seasons, serif;
     --sans-font: Corbel, Quicksand, Helvetica, sans-serif;
     --grid-gap: 1rem;
 }
@@ -236,9 +236,11 @@ img {
     margin-bottom: 4rem;
 }
 
-.gap-bottom {
+.gap-bottom,
+.gap-headline {
     margin-bottom: 1rem;
 }
+
 
 .screen-moodboard {
     margin-top: 2rem;
@@ -393,6 +395,10 @@ iframe {
     justify-content: center;
 }
 
+.wip {
+    font-size: 16rem;
+}
+
 @media screen and (max-width: 1000px) {
     .moodboard-grid {
         grid-template-columns: repeat(4, 1fr);
@@ -496,6 +502,22 @@ iframe {
     .moodboard-grid.hidden,
     .hidden {
         display: none;
+    }
+
+    #projects-screendesign {
+        flex-direction: column;
+    }
+
+    #projects-screendesign-txt {
+        order: 2;
+    }
+
+    #projects-screendesign-img {
+        order: 1;
+    }
+
+    .align-right {
+        text-align: left;
     }
 }
 
