@@ -37,7 +37,6 @@ site-header {
     width: 100%;
     margin: 0;
     z-index: 9999;
-    background-color: var(--background);
 }
 
 site-header.sticking {
@@ -46,6 +45,7 @@ site-header.sticking {
 }
 
 header {
+    background-color: var(--background);
     /* border-bottom: 0.1em solid var(--accent); */
 }
 
@@ -103,7 +103,7 @@ nav {
 
 nav ul {
     border-bottom: 0.1em solid var(--accent);
-    padding: 0;
+    padding: .5rem;
 }
 
 site-header.container {
