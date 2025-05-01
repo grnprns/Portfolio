@@ -152,10 +152,6 @@ main a {
     transition: 0.75s;
 }
 
-.placeholder {
-    border: 2px solid red;
-}
-
 /* Section styling */
 .brainstorming-section {
     margin-top: 2rem;
