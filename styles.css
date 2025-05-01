@@ -75,9 +75,18 @@ h2+p {
     font-size: 4rem;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Prevent inline spacing issues */
+}
+
 .index h2 {
     font-size: 3rem;
 }
+
+.index img {}
 
 footer {
     margin-top: auto;
@@ -124,12 +133,7 @@ main a {
     color: var(--black);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    /* Prevent inline spacing issues */
-}
+
 
 .screen {
     border: 1rem solid var(--black);
