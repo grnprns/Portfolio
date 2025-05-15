@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @font-face {
     font-family: "The Seasons";
     src: local("The Seasons"), local("TheSeasons-Regular");
@@ -6,9 +9,10 @@
 :root {
     --background: #FCF8F5;
     --black: #0E0E0E;
+    --gray: #4E4E4E;
     --accent: #F39DB1;
-    --fancy-font: the-seasons, serif;
-    --sans-font: Corbel, Quicksand, Helvetica, sans-serif;
+    --fancy-font: "The Seasons", "El Messiri";
+    --sans-font: "Open Sans", Helvetica, sans-serif;
     --grid-gap: 1rem;
 }
 
@@ -27,6 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    color: var(--black);
 }
 
 site-header {
@@ -54,24 +59,40 @@ main {
 }
 
 h1,
-h2,
 h3 {
     font-family: var(--fancy-font);
 }
 
 h1 {
     font-size: 3rem;
+    margin: 0;
 }
 
 h2 {
+    font-family: var(--sans-font);
     font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--gray);
 }
+
+#projects h2 {
+    font-family: var(--fancy-font);
+    color: var(--black);
+    margin: 0;
+}
+
+#projects h3 {
+    font-family: var(--sans-font);
+    color: var(--gray);
+    margin-bottom: .8rem;
+}
+
 
 h2+p {
     font-size: 2rem;
 }
 
-.index h1 {
+#index h1 {
     font-size: 4rem;
 }
 
@@ -82,11 +103,13 @@ img {
     /* Prevent inline spacing issues */
 }
 
-.index h2 {
+#index h2 {
     font-size: 3rem;
 }
 
-.index img {}
+#index img {
+    object-fit: contain;
+}
 
 footer {
     margin-top: auto;
@@ -134,22 +157,21 @@ main a {
 }
 
 
-
 .screen {
     border: 1rem solid var(--black);
     border-radius: 10px;
 }
 
 #logoImg {
-    color: var(--black);
+    fill: var(--black);
     width: 3rem;
     height: auto;
     margin-top: 0.5rem;
 }
 
 #logoImg:hover {
-    color: var(--accent);
-    transition: 0.75s;
+    fill: var(--accent);
+    transition: fill 0.75s;
 }
 
 /* Section styling */
@@ -359,6 +381,9 @@ main a {
     align-self: end;
 }
 
+#app-moodboard-game {
+    object-fit: cover;
+}
 
 iframe {
     width: 100%;
@@ -399,10 +424,16 @@ iframe {
     font-size: 16rem;
 }
 
+@media screen and (max-width: 1200px) {
+    .rect {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .moodboard-grid {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: repeat(3, auto);
     }
 
     .moodboard-grid h3 {
@@ -413,25 +444,24 @@ iframe {
         grid-column: 1/ span 2;
     }
 
-    .rect {
-        visibility: hidden;
-    }
-
     .moodboard-grid .img-1 {
         grid-column: 3;
         z-index: 3;
+        align-self: start;
     }
 
     .moodboard-grid .img-2 {
         grid-column: 4;
         margin-left: -7rem;
         z-index: 3;
+        margin-bottom: 2rem;
+        align-self: end;
     }
 
     .moodboard-grid .img-3 {
         grid-column: 1;
         grid-row: 3;
-        margin-left: 20px;
+        margin-left: 1rem;
         margin-right: -3rem;
         z-index: 6;
     }
@@ -447,6 +477,7 @@ iframe {
         margin-top: -3rem;
         z-index: 4;
     }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -514,6 +545,10 @@ iframe {
 
     #projects-screendesign-img {
         order: 1;
+    }
+
+    #projects h2 {
+        margin-top: .7rem;
     }
 
     .align-right {
