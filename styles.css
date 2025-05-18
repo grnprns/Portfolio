@@ -11,7 +11,7 @@
     --black: #0E0E0E;
     --gray: #4E4E4E;
     --accent: #F39DB1;
-    --fancy-font: "The Seasons", "El Messiri";
+    --fancy-font: "The Seasons", "El Messiri", serif;
     --sans-font: "Open Sans", Helvetica, sans-serif;
     --grid-gap: 1rem;
 }
@@ -20,9 +20,8 @@
 
 * {
     box-sizing: border-box;
+    font-family: "Open Sans", Helvetica, sans-serif;
     font-family: var(--sans-font);
-    /* font-family: The Seasons, Helvetica, serif; */
-    /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
 
 body {
@@ -99,8 +98,8 @@ h2+p {
 img {
     max-width: 100%;
     height: auto;
-    display: block;
     /* Prevent inline spacing issues */
+    display: block;
 }
 
 #index h2 {
@@ -127,6 +126,20 @@ nav {
 nav ul {
     border-bottom: 0.1em solid var(--accent);
     padding: .5rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto) 1fr auto auto;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul li:nth-last-child(2) {
+    grid-column: -2;
+    justify-self: end;
+}
+
+nav ul li:last-child {
+    grid-column: -1;
+    justify-self: end;
 }
 
 site-header.container {
@@ -147,7 +160,7 @@ nav a {
     font-size: 1rem;
 }
 
-nav a:hover {
+a:hover {
     color: var(--accent);
     transition: 0.5s;
 }
@@ -155,7 +168,6 @@ nav a:hover {
 main a {
     color: var(--black);
 }
-
 
 .screen {
     border: 1rem solid var(--black);
@@ -169,10 +181,24 @@ main a {
     margin-top: 0.5rem;
 }
 
-#logoImg:hover {
+#github-logo {
+    fill: var(--black);
+    height: 2rem;
+    width: auto;
+    transform: scaleY(-1);
+}
+
+#linkedin-logo {
+    fill: var(--black);
+    height: 2rem;
+    width: 2rem;
+}
+
+.animated:hover {
     fill: var(--accent);
     transition: fill 0.75s;
 }
+
 
 /* Section styling */
 .brainstorming-section {
@@ -564,5 +590,9 @@ iframe {
 
     .moodboard-grid .img-1 {
         margin-top: -3rem;
+    }
+
+    nav ul {
+        gap: 0;
     }
 }
