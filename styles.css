@@ -16,8 +16,6 @@
     --grid-gap: 1rem;
 }
 
-/* USE FALLBACK FONT!!!! https://stackoverflow.com/questions/53846582/can-i-use-css-variables-in-a-font-list-and-have-it-work-in-legacy-browsers */
-
 * {
     box-sizing: border-box;
     font-family: "Open Sans", Helvetica, sans-serif;
@@ -36,21 +34,17 @@ body {
 site-header {
     top: 0;
     position: sticky;
-    /* border-bottom: 0.1em solid #aeaeae; */
-    /* box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5); */
     width: 100%;
     margin: 0;
     z-index: 9999;
 }
 
 site-header.sticking {
-    /* border-bottom: 0.1em solid var(--accent); */
     transition: 0.5s;
 }
 
 header {
     background-color: var(--background);
-    /* border-bottom: 0.1em solid var(--accent); */
 }
 
 main {
@@ -119,7 +113,6 @@ li {
 }
 
 nav {
-    /* border-bottom: 0.1em solid var(--accent); */
     font-size: 0.1rem;
 }
 
