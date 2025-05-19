@@ -153,14 +153,10 @@ nav a {
     font-size: 1rem;
 }
 
-a:hover {
-    color: var(--accent);
-    transition: 0.5s;
-}
-
 main a {
     color: var(--black);
 }
+
 
 .screen {
     border: 1rem solid var(--black);
@@ -441,6 +437,11 @@ iframe {
 
 .wip {
     font-size: 16rem;
+}
+
+a:hover {
+    color: var(--accent) !important;
+    transition: 0.5s;
 }
 
 @media screen and (max-width: 1200px) {
