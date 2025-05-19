@@ -11,7 +11,6 @@ const header = `  <header>
                     </a>
                 </li>
                 <li><a href="./projects.html">Projects</a></li>
-                <li><a href="./sketchbook.html">Sketchbook</a></li>
                 <li><a href="../legal_notice.html">Legal Notice</a></li>
                 <li><a href="#"><svg alt="black and white LinkedIn logo" id="linkedin-logo" class="animated"
                             viewBox="0 0 1400 1400">

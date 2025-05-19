@@ -1,592 +1,599 @@
-@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-@font-face {
-    font-family: "The Seasons";
-    src: local("The Seasons"), local("TheSeasons-Regular");
-}
-
-:root {
-    --background: #FCF8F5;
-    --black: #0E0E0E;
-    --gray: #4E4E4E;
-    --accent: #F39DB1;
-    --fancy-font: "The Seasons", "El Messiri", serif;
-    --sans-font: "Open Sans", Helvetica, sans-serif;
-    --grid-gap: 1rem;
-}
-
-* {
-    box-sizing: border-box;
-    font-family: "Open Sans", Helvetica, sans-serif;
-    font-family: var(--sans-font);
-}
-
-body {
-    background-color: var(--background);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    color: var(--black);
-}
-
-site-header {
-    top: 0;
-    position: sticky;
-    width: 100%;
-    margin: 0;
-    z-index: 9999;
-}
-
-site-header.sticking {
-    transition: 0.5s;
-}
-
-header {
-    background-color: var(--background);
-}
-
-main {
-    margin: .5em;
-}
-
-h1,
-h3 {
-    font-family: var(--fancy-font);
-}
-
-h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-h2 {
-    font-family: var(--sans-font);
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: var(--gray);
-}
-
-#projects h2 {
-    font-family: var(--fancy-font);
-    color: var(--black);
-    margin: 0;
-}
-
-#projects h3 {
-    font-family: var(--sans-font);
-    color: var(--gray);
-    margin-bottom: .8rem;
-}
-
-
-h2+p {
-    font-size: 2rem;
-}
-
-#index h1 {
-    font-size: 4rem;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    /* Prevent inline spacing issues */
-    display: block;
-}
-
-#index h2 {
-    font-size: 3rem;
-}
-
-#index img {
-    object-fit: contain;
-}
-
-footer {
-    margin-top: auto;
-}
-
-li {
-    list-style: none;
-}
-
-nav {
-    font-size: 0.1rem;
-}
-
-nav ul {
-    border-bottom: 0.1em solid var(--accent);
-    padding: .5rem;
-    display: grid;
-    grid-template-columns: repeat(4, auto) 1fr auto auto;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-nav ul li:nth-last-child(2) {
-    grid-column: -2;
-    justify-self: end;
-}
-
-nav ul li:last-child {
-    grid-column: -1;
-    justify-self: end;
-}
-
-site-header.container {
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin: 0.5rem;
-}
-
-a {
-    text-decoration: none;
-}
-
-nav a {
-    color: var(--black);
-    font-size: 1rem;
-}
-
-main a {
-    color: var(--black);
-}
-
-
-.screen {
-    border: 1rem solid var(--black);
-    border-radius: 10px;
-}
-
-#logoImg {
-    fill: var(--black);
-    width: 3rem;
-    height: auto;
-    margin-top: 0.5rem;
-}
-
-#github-logo {
-    fill: var(--black);
-    height: 2rem;
-    width: auto;
-    transform: scaleY(-1);
-}
-
-#linkedin-logo {
-    fill: var(--black);
-    height: 2rem;
-    width: 2rem;
-}
-
-.animated:hover {
-    fill: var(--accent);
-    transition: fill 0.75s;
-}
-
-
-/* Section styling */
-.brainstorming-section {
-    margin-top: 2rem;
-    font-family: Arial, sans-serif;
-}
-
-.row-icons {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    /* Allow items to wrap to the next row if needed */
-}
-
-.row-icons div {
-    display: flex;
-    /* Stack the image and text vertically */
-    flex-direction: column;
-    /* Center-align the image and text */
-    align-items: center;
-    /* Center-align the text */
-    text-align: center;
-}
-
-.row-icons img {
-    width: 5.375rem;
-    height: auto;
-}
-
-.row-icons span {
-    width: 8rem;
-}
-
-/* Grid containers */
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
-    gap: 1rem;
-
-    img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border: 1px solid #ddd;
-    }
-}
-
-.wide-1 {
-    grid-column: span 1;
-}
-
-.wide-2 {
-    grid-column: span 2;
-}
-
-.wide-3 {
-    grid-column: span 3;
-}
-
-.wide-4 {
-    grid-column: span 3;
-}
-
-.wide-5 {
-    grid-column: span 3;
-}
-
-.tall-1 {
-    grid-row: span 1;
-}
-
-.tall-2 {
-    grid-row: span 2;
-}
-
-.grid-end {
-    align-content: end;
-}
-
-.gap-between-sections {
-    margin-bottom: 4rem;
-}
-
-.gap-bottom,
-.gap-headline {
-    margin-bottom: 1rem;
-}
-
-
-.screen-moodboard {
-    margin-top: 2rem;
-    font-family: Arial, sans-serif;
-}
-
-
-.moodboard-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.moodboard-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: auto 1fr 1fr;
-    /* Automatically adjust row height */
-    gap: 1rem;
-    position: relative;
-    /* Allows positioning of child elements */
-}
-
-.moodboard-grid h3 {
-    grid-column: 1 / 6;
-    grid-row: 1;
-}
-
-.moodboard-grid p {
-    grid-column: 1 / 6;
-    grid-row: 2;
-}
-
-.rect {
-    aspect-ratio: 1/1;
-}
-
-.rect.blue {
-    background-color: #005A9B;
-    grid-row: 2;
-    grid-column: 2;
-    align-self: end;
-}
-
-.rect.grey {
-    background: #B3B3B3;
-    grid-row: 2;
-    grid-column: 3;
-    align-self: end;
-}
-
-.rect.light-grey {
-    background: #D6D6D6;
-    grid-row: 2;
-    grid-column: 4;
-    align-self: end;
-}
-
-.rect.white {
-    background: #FFF;
-    grid-row: 2;
-    grid-column: 5;
-    border: 1px solid #d6d6d6;
-    align-self: end;
-}
-
-
-/* Styling for images */
-.moodboard-grid img {
-    width: 100%;
-    /* Make images responsive */
-    height: auto;
-    /* Maintain aspect ratio */
-    object-fit: cover;
-    /* Ensure images fit nicely */
-    position: relative;
-    /* Needed for z-index to work */
-}
-
-.moodboard-grid .img-1 {
-    grid-column: 6 / span 2;
-    grid-row: 2;
-    z-index: 3;
-    align-self: end;
-}
-
-.moodboard-grid .img-2 {
-    grid-column: 8 / span 3;
-    grid-row: 2;
-    margin-top: -5rem;
-    margin-left: -5rem;
-    z-index: 2;
-    align-self: end;
-}
-
-.moodboard-grid .img-3 {
-    grid-column: 2 / span 3;
-    grid-row: 3;
-    margin-left: 2rem;
-    z-index: 1;
-    align-self: end;
-}
-
-.moodboard-grid .img-4 {
-    grid-column: 4 / span 4;
-    grid-row: 3;
-    z-index: 4;
-    align-self: end;
-}
-
-.moodboard-grid .img-5 {
-    grid-column: 7 / span 4;
-    grid-row: 3;
-    margin-top: -1.5rem;
-    z-index: 1;
-    align-self: end;
-}
-
-#app-moodboard-game {
-    object-fit: cover;
-}
-
-iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1920 / 1080;
-}
-
-.white-img {
-    border: 1px solid #D6D6D6;
-    border-radius: .1rem;
-    padding: 0;
-    /* Ensure no padding inside the image */
-    margin: 0;
-    /* Ensure no margin around the image */
-}
-
-.read-more a {
-    text-decoration: underline;
-}
-
-.align-right {
-    text-align: right;
-}
-
-.project-desc {
-    margin-block-end: 0 !important;
-}
-
-.learn-more {
-    text-decoration: underline;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.wip {
-    font-size: 16rem;
-}
-
-a:hover {
-    color: var(--accent) !important;
-    transition: 0.5s;
-}
-
-@media screen and (max-width: 1200px) {
-    .rect {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .moodboard-grid {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, auto);
-    }
-
-    .moodboard-grid h3 {
-        grid-column: 1/ span 2;
-    }
-
-    .moodboard-grid p {
-        grid-column: 1/ span 2;
-    }
-
-    .moodboard-grid .img-1 {
-        grid-column: 3;
-        z-index: 3;
-        align-self: start;
-    }
-
-    .moodboard-grid .img-2 {
-        grid-column: 4;
-        margin-left: -7rem;
-        z-index: 3;
-        margin-bottom: 2rem;
-        align-self: end;
-    }
-
-    .moodboard-grid .img-3 {
-        grid-column: 1;
-        grid-row: 3;
-        margin-left: 1rem;
-        margin-right: -3rem;
-        z-index: 6;
-    }
-
-    .moodboard-grid .img-4 {
-        grid-column: 2;
-        margin-right: -5rem;
-        z-index: 5;
-    }
-
-    .moodboard-grid .img-5 {
-        grid-column: 3/span 2;
-        margin-top: -3rem;
-        z-index: 4;
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-    .grid-container {
-        display: block;
-    }
-
-
-    .gap-bottom {
-        margin-bottom: 0;
-    }
-
-    /* Gap below images on smaller screens */
-    .gap-bottom-md {
-        margin-bottom: 1rem;
-    }
-
-    .screen {
-        border-width: 0.5rem;
-        border-radius: 5px;
-    }
-
-    .moodboard-grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto auto auto 1fr;
-    }
-
-    .moodboard-grid p {
-        grid-column: 1 / span 3;
-        grid-row: 2;
-    }
-
-    .moodboard-grid .img-1 {
-        grid-row: 3;
-        margin-top: -1.5rem;
-    }
-
-    .moodboard-grid .img-3 {
-        grid-column: 1;
-        grid-row: 3;
-        margin-left: 1rem;
-        margin-right: -1rem;
-        z-index: 6;
-    }
-
-    .moodboard-grid .img-4 {
-        grid-column: 2;
-        grid-row: 3;
-        margin-right: -2rem;
-        z-index: 5;
-    }
-
-    .moodboard-grid.hidden,
-    .hidden {
-        display: none;
-    }
-
-    #projects-screendesign {
-        flex-direction: column;
-    }
-
-    #projects-screendesign-txt {
-        order: 2;
-    }
-
-    #projects-screendesign-img {
-        order: 1;
-    }
-
-    #projects h2 {
-        margin-top: .7rem;
-    }
-
-    .align-right {
-        text-align: left;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .moodboard-grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto 1fr auto;
-    }
-
-    .moodboard-grid .img-1 {
-        margin-top: -3rem;
-    }
-
-    nav ul {
-        gap: 0;
-    }
-}
+  @import url("https://use.typekit.net/pdj6lcg.css");
+  @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+  @font-face {
+      font-family: "The Seasons";
+      src: local("The Seasons"), local("TheSeasons-Regular");
+  }
+
+  :root {
+      --background: #FCF8F5;
+      --black: #0E0E0E;
+      --gray: #4E4E4E;
+      --accent: #F39DB1;
+      --fancy-font: "The Seasons", "El Messiri", serif;
+      --sans-font: "Open Sans", Helvetica, sans-serif;
+      --grid-gap: 1rem;
+  }
+
+  * {
+      box-sizing: border-box;
+      font-family: "Open Sans", Helvetica, sans-serif;
+      font-family: var(--sans-font);
+  }
+
+  body {
+      background-color: var(--background);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      color: var(--black);
+  }
+
+  site-header {
+      top: 0;
+      position: sticky;
+      width: 100%;
+      margin: 0;
+      z-index: 9999;
+  }
+
+  site-header.sticking {
+      transition: 0.5s;
+  }
+
+  header {
+      background-color: var(--background);
+  }
+
+  main {
+      margin: .5em;
+  }
+
+  h1,
+  h3 {
+      font-family: var(--fancy-font);
+  }
+
+  h1 {
+      font-size: 3rem;
+      margin: 0;
+  }
+
+  h2 {
+      font-family: var(--sans-font);
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--gray);
+  }
+
+  #projects h2 {
+      font-family: var(--fancy-font);
+      color: var(--black);
+      margin: 0;
+  }
+
+  #projects h3 {
+      font-family: var(--sans-font);
+      color: var(--gray);
+      margin-bottom: .8rem;
+  }
+
+  #projects a:hover h2,
+  #projects a:hover h3 {
+      color: var(--accent) !important;
+      transition: 0.5s;
+  }
+
+
+  h2+p {
+      font-size: 2rem;
+  }
+
+  #index h1 {
+      font-size: 4rem;
+  }
+
+  img {
+      max-width: 100%;
+      height: auto;
+      /* Prevent inline spacing issues */
+      display: block;
+  }
+
+  #index h2 {
+      font-size: 3rem;
+  }
+
+  #index img {
+      object-fit: contain;
+  }
+
+  footer {
+      margin-top: auto;
+  }
+
+  li {
+      list-style: none;
+  }
+
+  nav {
+      font-size: 0.1rem;
+  }
+
+  nav ul {
+      border-bottom: 0.1em solid var(--accent);
+      padding: .5rem;
+      display: grid;
+      grid-template-columns: repeat(4, auto) 1fr auto auto;
+      align-items: center;
+      gap: 0.5rem;
+  }
+
+  nav ul li:nth-last-child(2) {
+      grid-column: -2;
+      justify-self: end;
+  }
+
+  nav ul li:last-child {
+      grid-column: -1;
+      justify-self: end;
+  }
+
+  site-header.container {
+      padding: 0;
+  }
+
+  nav li {
+      display: inline;
+      margin: 0.5rem;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  nav a {
+      color: var(--black);
+      font-size: 1rem;
+  }
+
+  main a {
+      color: var(--black);
+  }
+
+
+  .screen {
+      border: 1rem solid var(--black);
+      border-radius: 10px;
+  }
+
+  #logoImg {
+      fill: var(--black);
+      width: 3rem;
+      height: auto;
+      margin-top: 0.5rem;
+  }
+
+  #github-logo {
+      fill: var(--black);
+      height: 2rem;
+      width: auto;
+      transform: scaleY(-1);
+  }
+
+  #linkedin-logo {
+      fill: var(--black);
+      height: 2rem;
+      width: 2rem;
+  }
+
+  .animated:hover {
+      fill: var(--accent);
+      transition: fill 0.75s;
+  }
+
+
+  /* Section styling */
+  .brainstorming-section {
+      margin-top: 2rem;
+      font-family: Arial, sans-serif;
+  }
+
+  .row-icons {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      /* Allow items to wrap to the next row if needed */
+  }
+
+  .row-icons div {
+      display: flex;
+      /* Stack the image and text vertically */
+      flex-direction: column;
+      /* Center-align the image and text */
+      align-items: center;
+      /* Center-align the text */
+      text-align: center;
+  }
+
+  .row-icons img {
+      width: 5.375rem;
+      height: auto;
+  }
+
+  .row-icons span {
+      width: 8rem;
+  }
+
+  /* Grid containers */
+
+  .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: auto;
+      gap: 1rem;
+
+      img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border: 1px solid #ddd;
+      }
+  }
+
+  .wide-1 {
+      grid-column: span 1;
+  }
+
+  .wide-2 {
+      grid-column: span 2;
+  }
+
+  .wide-3 {
+      grid-column: span 3;
+  }
+
+  .wide-4 {
+      grid-column: span 3;
+  }
+
+  .wide-5 {
+      grid-column: span 3;
+  }
+
+  .tall-1 {
+      grid-row: span 1;
+  }
+
+  .tall-2 {
+      grid-row: span 2;
+  }
+
+  .grid-end {
+      align-content: end;
+  }
+
+  .gap-between-sections {
+      margin-bottom: 4rem;
+  }
+
+  .gap-bottom,
+  .gap-headline {
+      margin-bottom: 1rem;
+  }
+
+
+  .screen-moodboard {
+      margin-top: 2rem;
+      font-family: Arial, sans-serif;
+  }
+
+
+  .moodboard-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
+
+  .moodboard-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: auto 1fr 1fr;
+      /* Automatically adjust row height */
+      gap: 1rem;
+      position: relative;
+      /* Allows positioning of child elements */
+  }
+
+  .moodboard-grid h3 {
+      grid-column: 1 / 6;
+      grid-row: 1;
+  }
+
+  .moodboard-grid p {
+      grid-column: 1 / 6;
+      grid-row: 2;
+  }
+
+  .rect {
+      aspect-ratio: 1/1;
+  }
+
+  .rect.blue {
+      background-color: #005A9B;
+      grid-row: 2;
+      grid-column: 2;
+      align-self: end;
+  }
+
+  .rect.grey {
+      background: #B3B3B3;
+      grid-row: 2;
+      grid-column: 3;
+      align-self: end;
+  }
+
+  .rect.light-grey {
+      background: #D6D6D6;
+      grid-row: 2;
+      grid-column: 4;
+      align-self: end;
+  }
+
+  .rect.white {
+      background: #FFF;
+      grid-row: 2;
+      grid-column: 5;
+      border: 1px solid #d6d6d6;
+      align-self: end;
+  }
+
+
+  /* Styling for images */
+  .moodboard-grid img {
+      width: 100%;
+      /* Make images responsive */
+      height: auto;
+      /* Maintain aspect ratio */
+      object-fit: cover;
+      /* Ensure images fit nicely */
+      position: relative;
+      /* Needed for z-index to work */
+  }
+
+  .moodboard-grid .img-1 {
+      grid-column: 6 / span 2;
+      grid-row: 2;
+      z-index: 3;
+      align-self: end;
+  }
+
+  .moodboard-grid .img-2 {
+      grid-column: 8 / span 3;
+      grid-row: 2;
+      margin-top: -5rem;
+      margin-left: -5rem;
+      z-index: 2;
+      align-self: end;
+  }
+
+  .moodboard-grid .img-3 {
+      grid-column: 2 / span 3;
+      grid-row: 3;
+      margin-left: 2rem;
+      z-index: 1;
+      align-self: end;
+  }
+
+  .moodboard-grid .img-4 {
+      grid-column: 4 / span 4;
+      grid-row: 3;
+      z-index: 4;
+      align-self: end;
+  }
+
+  .moodboard-grid .img-5 {
+      grid-column: 7 / span 4;
+      grid-row: 3;
+      margin-top: -1.5rem;
+      z-index: 1;
+      align-self: end;
+  }
+
+  #app-moodboard-game {
+      object-fit: cover;
+  }
+
+  iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1920 / 1080;
+  }
+
+  .white-img {
+      border: 1px solid #D6D6D6;
+      border-radius: .1rem;
+      padding: 0;
+      /* Ensure no padding inside the image */
+      margin: 0;
+      /* Ensure no margin around the image */
+  }
+
+  .read-more a {
+      text-decoration: underline;
+  }
+
+  .align-right {
+      text-align: right;
+  }
+
+  .project-desc {
+      margin-block-end: 0 !important;
+  }
+
+  .learn-more {
+      text-decoration: underline;
+  }
+
+  .justify-center {
+      justify-content: center;
+  }
+
+  .wip {
+      font-size: 16rem;
+  }
+
+  a:hover {
+      color: var(--accent) !important;
+      transition: 0.5s;
+  }
+
+  @media screen and (max-width: 1200px) {
+      .rect {
+          display: none;
+      }
+  }
+
+  @media screen and (max-width: 1000px) {
+      .moodboard-grid {
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(3, auto);
+      }
+
+      .moodboard-grid h3 {
+          grid-column: 1/ span 2;
+      }
+
+      .moodboard-grid p {
+          grid-column: 1/ span 2;
+      }
+
+      .moodboard-grid .img-1 {
+          grid-column: 3;
+          z-index: 3;
+          align-self: start;
+      }
+
+      .moodboard-grid .img-2 {
+          grid-column: 4;
+          margin-left: -7rem;
+          z-index: 3;
+          margin-bottom: 2rem;
+          align-self: end;
+      }
+
+      .moodboard-grid .img-3 {
+          grid-column: 1;
+          grid-row: 3;
+          margin-left: 1rem;
+          margin-right: -3rem;
+          z-index: 6;
+      }
+
+      .moodboard-grid .img-4 {
+          grid-column: 2;
+          margin-right: -5rem;
+          z-index: 5;
+      }
+
+      .moodboard-grid .img-5 {
+          grid-column: 3/span 2;
+          margin-top: -3rem;
+          z-index: 4;
+      }
+
+  }
+
+  @media screen and (max-width: 768px) {
+      .grid-container {
+          display: block;
+      }
+
+
+      .gap-bottom {
+          margin-bottom: 0;
+      }
+
+      /* Gap below images on smaller screens */
+      .gap-bottom-md {
+          margin-bottom: 1rem;
+      }
+
+      .screen {
+          border-width: 0.5rem;
+          border-radius: 5px;
+      }
+
+      .moodboard-grid {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: auto auto auto 1fr;
+      }
+
+      .moodboard-grid p {
+          grid-column: 1 / span 3;
+          grid-row: 2;
+      }
+
+      .moodboard-grid .img-1 {
+          grid-row: 3;
+          margin-top: -1.5rem;
+      }
+
+      .moodboard-grid .img-3 {
+          grid-column: 1;
+          grid-row: 3;
+          margin-left: 1rem;
+          margin-right: -1rem;
+          z-index: 6;
+      }
+
+      .moodboard-grid .img-4 {
+          grid-column: 2;
+          grid-row: 3;
+          margin-right: -2rem;
+          z-index: 5;
+      }
+
+      .moodboard-grid.hidden,
+      .hidden {
+          display: none;
+      }
+
+      #projects-screendesign {
+          flex-direction: column;
+      }
+
+      #projects-screendesign-txt {
+          order: 2;
+      }
+
+      #projects-screendesign-img {
+          order: 1;
+      }
+
+      #projects h2 {
+          margin-top: .7rem;
+      }
+
+      .align-right {
+          text-align: left;
+      }
+  }
+
+  @media screen and (max-width: 500px) {
+      .moodboard-grid {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: auto 1fr auto;
+      }
+
+      .moodboard-grid .img-1 {
+          margin-top: -3rem;
+      }
+
+      nav ul {
+          gap: 0;
+      }
+  }
