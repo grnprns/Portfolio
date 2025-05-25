@@ -12,7 +12,7 @@ const header = `  <header>
         </li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="legal_notice.html">Legal Notice</a></li>
-        <li><a href="#"><svg alt="black and white LinkedIn logo" id="linkedin-logo" class="animated"
+        <li><a href="https://www.linkedin.com/in/stefanie-maria-m%C3%BCller-6700a6177"><svg alt="black and white LinkedIn logo" id="linkedin-logo" class="animated"
                 viewBox="0 0 1400 1400">
                 <g fill="currentColor">
                 <path
